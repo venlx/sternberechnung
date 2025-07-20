@@ -1,0 +1,22 @@
+<main class="main">
+  <div class="content">
+    <input type="date" [(ngModel)]="selectedDate" name="date"/>
+    <button (click)="CalculateStar()">Calculate Star</button>
+    <!-- the star with the numbers -->
+    <div class="starnumber" *ngIf="allCalculated">
+      <div class="number-with-circle" style="position: absolute; top: 220px; left: 10px; background-color: darkorchid;">{{ topLeftPoint }}</div>
+      <div class="number-with-circle" style="position: absolute; top: 35px; left: 232px; background-color: darkred;">{{ topPoint }}</div>
+      <div class="number-with-circle" style="position: absolute; top: 220px; left: 460px; background-color: red;">{{ topRightPoint }}</div>
+      <div class="number-with-circle" style="position: absolute; top: 485px; left: 90px; background-color: darkred;">{{ bottomLeftPoint }}</div>
+      <div class="number-with-circle" style="position: absolute; top: 485px; left: 375px; background-color: darkred;">{{ bottomRightPoint }}</div>
+      <svg height="490" width="490" class="star" style="margin: 20px 0px;">
+        <circle cx="245" cy="245" r="230" style="fill:none;stroke:black;stroke-width:2;z-index:-100"/>
+        <line x1="245" y1="15" x2="245" y2="475" style="stroke:black;stroke-width:2;z-index:-100"/>
+        <path d="M245 15 L245 475" style="stroke:black;stroke-width:2;z-index:-100; transform: rotate(72deg)"/>
+        <path d="M20 195 L470 195 L95 470 L245 40 L395 470 Z" style="fill:none;stroke:black;stroke-width:2;z-index:-100"/>
+      </svg>
+    </div>
+  </div>
+</main>
+
+<router-outlet />

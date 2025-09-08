@@ -1,11 +1,64 @@
 .number-with-circle {
+    color: whitesmoke;
     border-radius: 900px;
     width: fit-content;
     min-width: 30px;
     padding: 5px;
     font-size: 30px;
+    stroke: black;
     font-weight: bold;
     text-align: center;
     stroke-opacity: 100%;
     stroke-width: 20px;
 }
+
+.red-number-with-circle {
+    color: darkred;
+    border-radius: 900px;
+    width: fit-content;
+    min-width: 30px;
+    padding: 5px;
+    font-size: 20px;
+    background-color: lightgrey;
+    font-weight: bold;
+    text-align: center;
+    stroke-opacity: 100%;
+    stroke-width: 20px;
+}
+
+body {
+  background: #100;
+}
+.base {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  margin: 0 auto;
+  top: 50px;
+}
+
+.bar, .overbar {
+  position: absolute;
+  height: 500px;
+  width: 5px;
+  left: 150px;
+  top: 50px;
+}
+
+li {
+  list-style-type: none;
+  height: 500px;
+  width: 5px;
+  margin-left: 80px;
+  background: black;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.n0 { -webkit-transform: rotate(270deg); }
+.n1 { -webkit-transform: rotate(342deg); }
+.n2 { -webkit-transform: rotate(54deg); }
+.n3 { -webkit-transform: rotate(126deg); }
+.n4 { -webkit-transform: rotate(198deg); }
+
+  

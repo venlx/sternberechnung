@@ -7,4 +7,6 @@ export class Star{
     public relationshipTriangle: Triangle = new Triangle;
     public healthTriangle: Triangle = new Triangle;
     public middle: number = 0;
+    public allIntersections: number = 0;
+    public middleWithIntersections: number = 0;
 }

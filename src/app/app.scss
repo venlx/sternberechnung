@@ -26,6 +26,20 @@
     stroke-width: 20px;
 }
 
+.number-with-red-circle {
+    color: whitesmoke;
+    border-radius: 900px;
+    width: fit-content;
+    min-width: 30px;
+    padding: 5px;
+    font-size: 20px;
+    background-color: darkred;
+    font-weight: bold;
+    text-align: center;
+    stroke-opacity: 100%;
+    stroke-width: 20px;
+}
+
 body {
   background: #100;
 }
@@ -60,5 +74,14 @@ li {
 .n2 { -webkit-transform: rotate(54deg); }
 .n3 { -webkit-transform: rotate(126deg); }
 .n4 { -webkit-transform: rotate(198deg); }
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid black;
+  background-color: white;
+}
 
   

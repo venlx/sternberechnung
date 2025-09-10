@@ -39,6 +39,14 @@ export class App {
       + this.star.dutyTriangle.point
       + this.star.relationshipTriangle.point 
       + this.star.healthTriangle.point)
+    
+    this.star.allIntersections = this.CheckAndGetDigitSum(this.star.personalityTriangle.rightIntersection 
+      + this.star.spiritiualityTriangle.rightIntersection 
+      + this.star.dutyTriangle.rightIntersection
+      + this.star.relationshipTriangle.rightIntersection 
+      + this.star.healthTriangle.rightIntersection)
+    
+    this.star.middleWithIntersections = this.CheckAndGetDigitSum(this.star.middle + this.star.allIntersections)
 
     this.allCalculated = true;
   }

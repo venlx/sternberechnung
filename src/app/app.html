@@ -3,7 +3,7 @@
     <input type="date" [(ngModel)]="selectedDate" name="date"/>
     <button (click)="calcStar()">Berechnen</button>
     <!-- the star with the numbers -->
-    <div class="starnumber" *ngIf="allCalculated">
+    <div class="starnumber" *ngIf="allCalculated" style="position: absolute; top: 10px; left: 130px;">
       <div class="base">
         <div class="bar n0"><li></li></div>
         <div class="bar n1"><li></li></div>
@@ -39,6 +39,115 @@
         <div class="red-number-with-circle" style="position: absolute; top: 310px; left: 35px;">{{ star.healthTriangle.rightIntersection }}</div>
 
         <div class="red-number-with-circle" style="position: absolute; top: 270px; left: 130px; font-size: 30px;">{{ star.middle }}</div>
+      </div>
+    </div>
+    <div class="personalityTriangle" *ngIf="allCalculated" style="position: absolute; top: 700px; left: 200px;">
+      <div style="font-weight: bold; position: absolute; top: -30px; left: -15px;">Persönlichkeitsdreieck</div>
+      <svg width="150" height="200" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="75,20 10,180 140,180" fill="none" stroke="black" stroke-width="4"/>
+      </svg>
+      <div class="red-number-with-circle" style="position: absolute; top: 0px; left: 55px;">{{ star.personalityTriangle.point }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 90px; left: 20px;">{{ star.personalityTriangle.leftMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 90px; left: 90px;">{{ star.personalityTriangle.rightMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: -10px;">{{ star.personalityTriangle.leftIntersection }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: 55px;">{{ star.personalityTriangle.bottomMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: 120px;">{{ star.personalityTriangle.rightIntersection }}</div>
+    </div>
+
+    <div class="spiritiualityTriangle" *ngIf="allCalculated" style="position: absolute; top: 1000px; left: 200px;">
+      <div style="font-weight: bold; position: absolute; top: -30px; left: -10px">Spiritualitätsdreieck</div>
+      <svg width="150" height="200" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="75,20 10,180 140,180" fill="none" stroke="black" stroke-width="4"/>
+      </svg>
+      <div class="red-number-with-circle" style="position: absolute; top: 0px; left: 55px;">{{ star.spiritiualityTriangle.point }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 90px; left: 20px;">{{ star.spiritiualityTriangle.leftMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 90px; left: 90px;">{{ star.spiritiualityTriangle.rightMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: -10px;">{{ star.spiritiualityTriangle.leftIntersection }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: 55px;">{{ star.spiritiualityTriangle.bottomMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: 120px;">{{ star.spiritiualityTriangle.rightIntersection }}</div>
+    </div>
+
+    <div class="dutyTriangle" *ngIf="allCalculated" style="position: absolute; top: 1300px; left: 200px;">
+      <div style="font-weight: bold; position: absolute; top: -30px;">Berufungsdreieck</div>
+      <svg width="150" height="200" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="75,20 10,180 140,180" fill="none" stroke="black" stroke-width="4"/>
+      </svg>
+      <div class="red-number-with-circle" style="position: absolute; top: 0px; left: 55px;">{{ star.dutyTriangle.point }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 90px; left: 20px;">{{ star.dutyTriangle.leftMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 90px; left: 90px;">{{ star.dutyTriangle.rightMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: -10px;">{{ star.dutyTriangle.leftIntersection }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: 55px;">{{ star.dutyTriangle.bottomMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: 120px;">{{ star.dutyTriangle.rightIntersection }}</div>
+    </div>
+
+    <div class="relationshipTriangle" *ngIf="allCalculated" style="position: absolute; top: 1600px; left: 200px;">
+      <div style="font-weight: bold; position: absolute; top: -30px;">Beziehungsdreieck</div>
+      <svg width="150" height="200" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="75,20 10,180 140,180" fill="none" stroke="black" stroke-width="4"/>
+      </svg>
+      <div class="red-number-with-circle" style="position: absolute; top: 0px; left: 55px;">{{ star.relationshipTriangle.point }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 90px; left: 20px;">{{ star.relationshipTriangle.leftMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 90px; left: 90px;">{{ star.relationshipTriangle.rightMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: -10px;">{{ star.relationshipTriangle.leftIntersection }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: 55px;">{{ star.relationshipTriangle.bottomMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: 120px;">{{ star.relationshipTriangle.rightIntersection }}</div>
+    </div>
+
+    <div class="healthTriangle" *ngIf="allCalculated" style="position: absolute; top: 1900px; left: 200px;">
+      <div style="font-weight: bold; position: absolute; top: -30px;">Gesundheitsdreieck</div>
+      <svg width="150" height="200" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="75,20 10,180 140,180" fill="none" stroke="black" stroke-width="4"/>
+      </svg>
+      <div class="red-number-with-circle" style="position: absolute; top: 0px; left: 55px;">{{ star.healthTriangle.point }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 90px; left: 20px;">{{ star.healthTriangle.leftMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 90px; left: 90px;">{{ star.healthTriangle.rightMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: -10px;">{{ star.healthTriangle.leftIntersection }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: 55px;">{{ star.healthTriangle.bottomMiddle }}</div>
+      <div class="red-number-with-circle" style="position: absolute; top: 160px; left: 120px;">{{ star.healthTriangle.rightIntersection }}</div>
+    </div>
+
+    <div class="starnumber" *ngIf="allCalculated" style="position: absolute; top: 2100px; left: 130px;">
+      <div style="font-size: 26px; font-weight: bold; position: absolute; top: 50px; left: 50px">Lebensmission</div>
+      <div class="base">
+        <div class="bar n0"><li></li></div>
+        <div class="bar n1"><li></li></div>
+        <div class="bar n2"><li></li></div>
+        <div class="bar n3"><li></li></div>
+        <div class="bar n4"><li></li></div>
+        <div class="number-with-red-circle" style="position: absolute; top: 270px; left: 80px;">{{ star.middle }}</div>
+        <div class="number-with-red-circle" style="position: absolute; top: 270px; left: 130px;">{{ star.allIntersections }}</div>
+        <div class="number-with-red-circle" style="position: absolute; top: 270px; left: 180px;">{{ star.middleWithIntersections }}</div>
+      </div>
+    </div>
+
+    <div class="starnumber" *ngIf="allCalculated" style="position: absolute; top: 2700px; left: 130px;">
+      <div style="font-size: 26px; font-weight: bold; position: absolute; top: 50px; left: 90px;">Chakren</div>
+      <div class="base">
+        <div class="bar n0"><li></li></div>
+        <div class="bar n1"><li></li></div>
+        <div class="bar n2"><li></li></div>
+        <div class="bar n3"><li></li></div>
+        <div class="bar n4"><li></li></div>
+        <div class="number-with-circle" style="position: absolute; top: 195px; left: -100px; background-color: darkorchid;">{{ star.personalityTriangle.point }}</div>
+        <div class="number-with-circle" style="position: absolute; top: 195px; left: 380px; background-color: red;">{{ star.dutyTriangle.point }}</div>
+
+        <div class="number-with-circle" style="position: absolute; top: 175px; left: -15px; background-color: blue;">{{ star.personalityTriangle.rightMiddle }}</div>
+        <div class="number-with-circle" style="position: absolute; top: 175px; left: 70px; background-color: cyan;">{{ star.personalityTriangle.rightIntersection }}</div>
+        <div class="number-with-circle" style="position: absolute; top: 175px; left: 130px; background-color: mediumseagreen;">{{ star.spiritiualityTriangle.bottomMiddle }}</div>
+        <div class="number-with-circle" style="position: absolute; top: 175px; left: 190px; background-color: gold;">{{ star.dutyTriangle.leftIntersection }}</div>
+        <div class="number-with-circle" style="position: absolute; top: 175px; left: 280px; background-color: orange;">{{ star.dutyTriangle.leftMiddle }}</div>
+      </div>
+    </div>
+
+    <div class="starnumber" *ngIf="allCalculated" style="position: absolute; top: 3300px; left: 130px;">
+      <div style="font-size: 26px; font-weight: bold; position: absolute; top: 50px; left: 90px;">Ur-Fehler</div>
+      <div class="base">
+        <div class="bar n0"><li></li></div>
+        <div class="bar n1"><li></li></div>
+        <div class="bar n2"><li></li></div>
+        <div class="bar n3"><li></li></div>
+        <div class="bar n4"><li></li></div>
+        <div class="number-with-red-circle" style="position: absolute; top: 420px; left: 130px;">{{ star.relationshipTriangle.rightIntersection }}</div>
       </div>
     </div>
   </div>

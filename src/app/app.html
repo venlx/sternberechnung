@@ -1,7 +1,9 @@
 <main class="main">
   <div class="content">
-    <input type="date" [(ngModel)]="selectedDate" name="date"/>
-    <button (click)="calcStar()">Berechnen</button>
+    <div style="position: absolute; top: 40px; left: 200px">
+      <input type="date" [(ngModel)]="selectedDate" name="date"/>
+      <button (click)="calcStar()" style="margin-left: 5px;">&#9733;</button>
+    </div>
     <!-- the star with the numbers -->
     <div class="starnumber" *ngIf="allCalculated" style="position: absolute; top: 10px; left: 130px;">
       <div class="base">
@@ -107,7 +109,7 @@
     </div>
 
     <div class="starnumber" *ngIf="allCalculated" style="position: absolute; top: 2100px; left: 130px;">
-      <div style="font-size: 26px; font-weight: bold; position: absolute; top: 50px; left: 50px">Lebensmission</div>
+      <div style="font-size: 26px; font-weight: bold; position: absolute; top: 45px; left: 50px">Lebensmission</div>
       <div class="base">
         <div class="bar n0"><li></li></div>
         <div class="bar n1"><li></li></div>
@@ -121,7 +123,7 @@
     </div>
 
     <div class="starnumber" *ngIf="allCalculated" style="position: absolute; top: 2700px; left: 130px;">
-      <div style="font-size: 26px; font-weight: bold; position: absolute; top: 50px; left: 90px;">Chakren</div>
+      <div style="font-size: 26px; font-weight: bold; position: absolute; top: 45px; left: 90px;">Chakren</div>
       <div class="base">
         <div class="bar n0"><li></li></div>
         <div class="bar n1"><li></li></div>
@@ -140,7 +142,7 @@
     </div>
 
     <div class="starnumber" *ngIf="allCalculated" style="position: absolute; top: 3300px; left: 130px;">
-      <div style="font-size: 26px; font-weight: bold; position: absolute; top: 50px; left: 90px;">Ur-Fehler</div>
+      <div style="font-size: 26px; font-weight: bold; position: absolute; top: 45px; left: 90px;">Ur-Fehler</div>
       <div class="base">
         <div class="bar n0"><li></li></div>
         <div class="bar n1"><li></li></div>
